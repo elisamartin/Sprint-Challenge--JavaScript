@@ -14,9 +14,6 @@ class Dinosaur {
 		this.length = attr.length;
 		this.period = attr.period;
 	}
-	roar() {
-		return 'RAWERSRARARWERSARARARRRR!';
-	}
 }
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
 
@@ -63,6 +60,9 @@ console.log(stegosaurus.length);
 console.log(tyrannosaurus.period);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
+tyrannosaurus.roar = function() {
+	return 'RAWERSRARARWERSARARARRRR!';
+};
 console.log(tyrannosaurus.roar());
 
 // ==== Arrays ====
@@ -216,7 +216,5 @@ function addPop(accumulator, animal) {
 console.log(populationTotal);
 
 /* 
-
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
-
 */
