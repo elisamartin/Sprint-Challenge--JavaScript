@@ -181,17 +181,20 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
 
 */
-
+/*
 const lowerCase = zooAnimals.map(function(animal) {
 	let lowerName = animal.animal_name.toLowerCase();
 	return lowerName;
 });
+*/
+
+const lowerCase = zooAnimals.map((animal) => animal.animal_name.toLowerCase());
 
 console.log(lowerCase);
 
 /* Request 3: .filter() 
 
-The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
+The zoos are concerned about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
 
@@ -201,6 +204,7 @@ function checkSmallPop(animal) {
 		return animal;
 	}
 }
+
 console.log(smallerPopulation);
 
 /* Request 4: .reduce() 
@@ -209,10 +213,16 @@ The zoos need to know their total animal population across the United States.
 Find the total population from all the zoos using the .reduce() method.
 
 */
+
+/*
 const populationTotal = zooAnimals.reduce(addPop, 0);
 function addPop(accumulator, animal) {
 	return accumulator + animal.population;
 }
+*/
+
+const populationTotal = zooAnimals.reduce((accumulator, animal) => accumulator + animal.population, 0);
+
 console.log(populationTotal);
 
 /* 
