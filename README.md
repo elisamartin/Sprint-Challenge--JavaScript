@@ -30,13 +30,34 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+.map() executed a given function for every element in an array and will return a new array with the results
+.forEach() executes a given function for every element in an array but doesn't return anything
+
 2. What is the difference between a function and a method?
+
+They're basically the same but a method is a function that will be used by the object is declared inside of
 
 3. What is closure?
 
+It's a feature where an inner function access another declared on an outer scope. 'something' is being accessed from inside 'whatIsThis()'
+
+let something = 'This seems to be something';
+	function whatIsThis() {
+		return something;
+	}
+	console.log(whatIsThis());
+
 4. Describe the four rules of the 'this' keyword.
 
+- Windows Binding, 'this' points to the window object 
+- Implicit Binding, a function is called, after 'this'.
+- New Binding, when creating objects from a constructor function with the keyword new, 'this' refers to the specific object created
+- Explicit Binding, using ".apply()" or ".call()" we explicitly define 'this'.
+
+
 5. Why do we need super() in an extended class?
+
+We need super() to call the parent of the new object we're creating
 
 ### Git Set up
 
